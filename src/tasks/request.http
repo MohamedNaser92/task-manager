@@ -1,0 +1,83 @@
+### Create new Task text content
+POST http://localhost:3000/tasks/create/10
+Content-Type: application/json
+
+{
+  "type": "text",
+  "textContent":"task 31",
+  "isShared": false
+}
+
+
+### Create new Task list content
+POST http://localhost:3000/tasks/create/11
+Content-Type: application/json
+
+{
+  "type": "list",
+"listContent": ["task 35", "task 9 6","task 4 3"],
+  "isShared": false
+}
+
+### Find All Tasks 
+GET  http://localhost:3000/tasks
+
+### Find Tasks by category:
+GET  http://localhost:3000/tasks/category/8
+
+
+
+### Find Tasks by user:
+GET  http://localhost:3000/tasks/user
+
+
+
+### Update Task
+PATCH  http://localhost:3000/tasks/17
+Content-Type: application/json
+
+{
+  "type": "text",
+  "textContent":"task 17",
+  "isShared": true
+}
+
+
+### Remove Task
+DELETE   http://localhost:3000/tasks/12
+
+
+
+
+
+### Pagination
+Get   http://localhost:3000/tasks/custom?page=1&limit=5
+
+
+
+### Filtring by category name
+Get   http://localhost:3000/tasks/custom?filterByCategoryName=Cat%201%204%20
+
+
+
+### Filtring by task shared
+
+GET  http://localhost:3000/tasks/custom?filterByTaskShared=false
+
+
+
+
+### Sorting By Category Name
+
+GET  http://localhost:3000/tasks/custom?sortBy=category&order=ASC
+
+
+
+### Sorting By Shared Name
+
+GET  http://localhost:3000/tasks/custom?sortBy=shared&order=DESC
+
+
+
+### All 
+GET http://localhost:3000/tasks/custom?page=1&limit=5&filterByTaskShared=flase&sortBy=category&order=DESC

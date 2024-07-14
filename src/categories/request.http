@@ -1,0 +1,35 @@
+### Create Category
+
+POST http://localhost:3000/categories/create
+Content-Type: application/json
+
+{"name":"Cat 3 4 "}
+
+### Find category with id
+
+GET http://localhost:3000/categories/onecategory/4
+Content-Type: application/json
+
+
+### Find all categories
+
+GET http://localhost:3000/categories/allcateg
+
+
+### Find Ctegories of user
+
+GET http://localhost:3000/categories/allcategories
+
+
+### Update Category
+
+PATCH  http://localhost:3000/categories/12
+Content-Type: application/json
+
+{"name":"cat12 editted2 forr mohamed userid 3"}
+
+
+### Delete Category
+
+DELETE   http://localhost:3000/categories/12
+

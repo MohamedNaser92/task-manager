@@ -1,0 +1,64 @@
+### Create new user
+
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+"email":"eman@gmail.com",
+"password":"123",
+"name":"Eman"
+}
+
+
+### Signin
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+"email":"eman@gmail.com",
+"password":"123"
+}
+
+
+
+### Who is signing in
+GET http://localhost:3000/auth/whoissigning
+
+
+
+
+### Signout
+POST http://localhost:3000/auth/signout
+
+
+### Find All Users 
+
+GET  http://localhost:3000/auth/allusers
+
+
+
+### Find one User with id
+GET http://localhost:3000/auth/2
+
+
+
+
+
+
+### Find  User with email
+GET http://localhost:3000/auth/?email=ahmed@gmail.com
+
+### remove  User with id
+
+DELETE  http://localhost:3000/auth/6
+
+
+### Update User 
+
+PATCH  http://localhost:3000/auth/5
+Content-Type: application/json
+
+{
+
+"password":"111"
+}

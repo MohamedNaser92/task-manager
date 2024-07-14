@@ -26,7 +26,13 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Features
 
+- User Authentication (Signup, Signin, Signout)
+- CRUD operations for users, categories, and tasks
+- Task types: Text task (has text body) and List task (has list items containing text body)
+- Pagination, filtering, and sorting for tasks
+- Task visibility: Public (shared) or private
 
 ## Installation
 
@@ -59,6 +65,9 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+### Usage of .http files
+Every module in this project has a request.http file containing various API requests. You can use these files with the REST Client extension in VSCode to test the APIs easily.
 
 ## Support
 
